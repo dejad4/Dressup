@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bratz: Lets Get Ready</title>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}	
+</script>
+	<style>
+	body{
+    margin: 0;
+    background-color:purple;
+}
+	header{background-color:deeppink;
+		text-align: center;}
+     wrapper {
+    margin: auto;
+    width:250px;
+    display: block;
+    padding: 10px;
+		}
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: deeppink;
+    border: thin solid black;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+		img.a{ width: 300px;
+		height:700px;
+		display:block;
+		 margin-left:-400px;
+      
+		}
+		footer{
+		background-color:deeppink;}
+    </style>
+</head>
+<body>
+	<header><img src="Logo.png" width="250" height="" alt=""/></header>
+	<wrapper>
+	<img class="a" src="Bratz Doll.png" width="712" height="1872" alt=""/>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	</wrapper>
+	<footer>© 2025, Deja Davis
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</footer>
+</body>
+</html>
