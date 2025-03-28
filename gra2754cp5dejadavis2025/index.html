@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bratz: Lets Get Ready</title>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<style>
+body {
+    margin: 0;
+    background-color: purple;
+}
+header {
+    background-color: deeppink;
+    text-align: center;
+}
+wrapper {
+    margin: auto;
+    width: 1015px;
+    display: block;
+    position: relative;
+    background-image: url("Bratz Doll.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+@font-face {
+    font-family: Bratzfont;
+    src: url( "FUNKHOUS.TTF");
+}
+h1 {
+    font-family: Bratzfont;
+    font-size: 50px;
+}
+#crop {
+}
+#jeanS {
+}
+#redS {
+    transform: translateX(10px) translateY(-40px);
+}
+#jean {
+}
+#jeanCrop {
+}
+#neck {
+    height: 100%;
+    width: auto;
+}
+#brace {
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+img.a {
+    display: block;
+    margin-left: -650px;
+    transform: translateY(150px);
+}
+div img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#div4 #brace {
+    width: auto;
+    height: 72px;
+    left: 30px;
+    top: 80px;
+}
+#drop3 {
+    text-align: center;
+}
+#div1 #neck {
+    width: auto;
+    height: 55px;
+    top: 280px;
+    left: 119px;
+}
+div {
+    width: 315px;
+    height: 300px;
+    margin: 10px;
+    border: thick solid deeppink;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+footer {
+    background-color: deeppink;
+}
+#div1, #div4, #drop1 {
+    border: none;
+}
+</style>
+</head>
+<body>
+<header><img src="Logo.png" width="300" height="" alt=""/>
+  <h1 align="center"> LETS GET READY</h1>
+</header>
+<wrapper>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+	  
+	  <img id="redS" src="Red Shoes.png" draggable="true" ondragstart="drag(event)" width="200" height="200" alt=""/>
+	</div>
+  <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  
+	  <img id="crop" src="Croptop.png"  draggable="true" ondragstart="drag(event)" width="200" height="150" alt=""/> 
+	</div>
+  <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+  <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  
+	  <img id="jeanCrop" src="JeanCrop.png"   draggable="true" ondragstart="drag(event)" width="150" height="150" alt=""/> 
+	</div>
+  <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  
+	  <img id="jeanS" src="Jean Skirt.png"  draggable="true" ondragstart="drag(event)" width="170" height="" alt=""/>
+	</div>
+  <div id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	</div>
+  <div id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="brace" src="Bracelet2.png" draggable="true" ondragstart="drag(event)" width="200" height="" alt=""/>
+	</div>
+  <div id="drop3" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="neck" src="Necklace.png"  draggable="true" ondragstart="drag(event)" width="200" height="" alt=""/>
+	</div>
+</wrapper>
+<footer>© 2025, Deja Davis
+  This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</footer>
+</body>
+</html>
